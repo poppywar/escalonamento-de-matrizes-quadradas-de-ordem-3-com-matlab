@@ -1,11 +1,11 @@
 
-%m = numero de equaçoes = n de linhas da matriz A
+%m = numero de equacoes = n de linhas da matriz A
 %n = numero de ingonitas = n de linhas da matriz B = n de colunas da matriz A
 %1 = n de colunas da matriz B
 
 
 [m,n] = size (A);
-%A primeira ação é organizar os pivos 
+%A primeira acaoo eh organizar os pivos 
 
 for i = 1 : m - 1;
   for j = 2 : m;
@@ -21,14 +21,14 @@ for i = 1 : m - 1;
    endfor
 endfor
 
-disp("Matriz A após organizar os pivôs. Lembrando que ela é formada pelos coeficientes que multiplicam as incognitas");
+disp("Matriz A apos organizar os pivos. Lembrando que ela eh formada pelos coeficientes que multiplicam as incognitas");
 
 A
 
-disp("Matriz B após organizar os pivôs. Lembrando que ela é formada pelos termos independentes");
+disp("Matriz B apos organizar os pivos. Lembrando que ela eh formada pelos termos independentes");
 B
 
-% A segunda ação é realizar o escalonamento
+% A segunda acao eh realizar o escalonamento
 
 for i = 1 : m - 1; 
   for j = i+1 : m; 
@@ -39,10 +39,10 @@ for i = 1 : m - 1;
    endfor
 endfor
 
-disp("Matriz A após ser escalonada. Lembrando que ela é formada pelos coeficientes que multiplicam as incognitas");
+disp("Matriz A apos ser escalonada. Lembrando que ela eh formada pelos coeficientes que multiplicam as incognitas");
 A
 
-disp("Matriz B após ser escalonada. Lembrando que ela é formada pelos termos independentes");
+disp("Matriz B apos ser escalonada. Lembrando que ela eh formada pelos termos independentes");
 B
 
 
@@ -84,9 +84,9 @@ endfor
     
 
 
-% A ultima ação é simplificar as matrizes
-for i = 1 : m; %cada laço irá simplificar uma linha
-  h=A (i,i); %pivo pois ele necessáriamente não é nulo
+% A ultima acao eh simplificar as matrizes
+for i = 1 : m; %cada laco ira simplificar uma linha
+  h=A (i,i); %pivo pois ele necessariamente nao eh nulo
   f=1; % numero que dividira toda a linha
   %encontrar o numero divisor 
   for k = 2: h;
@@ -120,16 +120,16 @@ for i = 1 : m; %cada laço irá simplificar uma linha
       f=k;
     endif
   endfor
-  %ao final f será o máximo divisor comum
+  %ao final f sera o maximo divisor comum
     for j = 1 : n;
       A(i,j)= (A(i,j))/f;
     endfor
     B(i,1)= (B(i,1))/f;  
 endfor
 
-disp("Matriz A após ser simplificada. Lembrando que ela é formada pelos coeficientes que multiplicam as incognitas");
+disp("Matriz A apos ser simplificada. Lembrando que ela eh formada pelos coeficientes que multiplicam as incognitas");
 A
 
-disp("Matriz B após ser simplificada. Lembrando que ela é formada pelos termos independentes");
+disp("Matriz B apos ser simplificada. Lembrando que ela eh formada pelos termos independentes");
 B 
    
